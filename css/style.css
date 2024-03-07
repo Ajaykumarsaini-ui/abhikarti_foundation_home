@@ -7,14 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --primary-color: #A19E9E;
+    /* --primary-color: #A19E9E; */
+    --primary-color: #98aa9b;
     --secondary-color: #ffffff;
     --secondary-bg: #F8F8F8;
-    --para-color: ;
-    --heading-color: #00BFFF;
+    --smallheadings-color: #f98100;
+    --heading-color: #170e80;
     --btn-color: #89CFF0;
     --btn-hover-color: #98FB98;
-    /* --btn-color-bg: ; */
     --secondary-text: #D3D3D3;
     --font-family: "Roboto", sans-serif;
     --primary-para: #808080;
@@ -28,7 +28,7 @@
 header {
     margin: 0;
     padding: 0;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-bg);
     font-family: var(--font-family);
 
     nav {
@@ -38,7 +38,7 @@ header {
         justify-content: center;
         text-align: right;
         align-items: center;
-        background: #A19E9E;
+        background: var(--secondary-bg);
 
 
         ul {
@@ -69,6 +69,7 @@ nav .navbar-brand {
     font-size: 20px;
     font-weight: 600;
     line-height: 20px;
+    color: var(--smallheadings-color);
 }
 
 header .row {
@@ -79,7 +80,7 @@ header .row {
 header.container-fluid {
     margin: 0;
     padding: 0;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
 }
 
 header #header_img img {
@@ -90,31 +91,32 @@ header #header_img img {
 }
 
 button a {
-    background-color: var(--btn-color);
-    color: black;
+    color: rgb(41, 36, 36);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     font-family: var(--font-family);
-    padding: 15px 20px;
+    padding: 18px 24px;
     border-radius: 10px;
+    border: 2px solid black;
 }
 
 .btn a:hover {
     background-color: var(--btn-hover-color);
 }
 
-h2 {
+/* h2 {
     color: var(--heading-color) !important;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 60px;
-}
+} */
 
 h1 {
     color: var(--heading-color) !important;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 60px;
+    font-family: var(--font-family) !important;
+    font-weight: 600 !important;
+    font-size: 46px !important;
+    line-height: 55px !important;
 }
 
 
@@ -142,6 +144,9 @@ h1 {
 
 #hero p {
     color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
 }
 
 #hero .row :nth-child(2) {
@@ -158,6 +163,7 @@ h1 {
     height: 300px;
     object-fit: cover;
     background-position: center;
+    border: 5px solid var(--btn-hover-color);
 }
 
 #Featured_Sessions .img_content {
@@ -168,7 +174,7 @@ h1 {
 }
 
 #Featured_Sessions .img_border {
-    border-bottom: 2px solid black;
+    border-bottom: 5px solid var(--smallheadings-color);
 }
 
 /* <!-- News Gallery --> */
@@ -181,6 +187,7 @@ h1 {
     max-height: 550px;
     max-width: 1050px;
     transform: translatex(-5%);
+    border-radius: 28px;
 }
 
 #gallerey .secondary_images {
@@ -199,6 +206,9 @@ h1 {
     object-fit: cover;
     background-position: center;
     background: center;
+    background-repeat: no-repeat;
+    border-radius: 19px;
+    box-shadow: 3px 1px 22px;
 }
 
 /* <!-- <footer></footer> --> */
@@ -211,12 +221,25 @@ h1 {
 
 }
 
+#footer #footer_icons .icon_content {
+    font-weight: 400;
+    font-family: var(--font-family);
+    color: #aaa;
+}
+
 #footer #footer_icons .border_footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 200px;
     font-size: 18px;
+
+}
+
+#footer .navbar-brand {
+    color: var(--smallheadings-color);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 #footer .contact {
@@ -232,19 +255,33 @@ h1 {
     line-height: 30px;
 }
 
+#footer .contact h6 span {
+    color: var(--smallheadings-color);
+    font-size: 25px;
+}
+
 #footer {
     margin-top: 30px;
     background-color: #808080;
+    color: var(--secondary-color);
 }
 
 #footer i:hover {
-    color: var(--heading-color);
+    color: var(--smallheadings-color);
     cursor: pointer;
 
 }
 
 #footer i {
     font-size: 19px;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #navresponsive {
